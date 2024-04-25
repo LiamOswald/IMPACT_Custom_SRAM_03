@@ -1,0 +1,102 @@
+** sch_path: /home/impact/Desktop/APRIL TAPEOUT DESIGN/SCHEMATIC/core_flat_v4.sch
+.subckt core_flat_v4 DIGITALIN1 AIN1 SEL1 DIGITALIN2 AIN2 SEL2 DIGITALIN3 AIN3 SEL3 vssd1 vccd1 vdda1 vssa1
+*.PININFO DIGITALIN1:B AIN1:B SEL1:B DIGITALIN2:B AIN2:B SEL2:B DIGITALIN3:B AIN3:B SEL3:B vssd1:B
+*+ vccd1:B vdda1:B vssa1:B
+x2 vccd1 DIGITALIN1 SEL1 AIN1 net1 net2 vdda1 vssa1 vssd1 CONTROLLER
+x3 vccd1 DIGITALIN3 SEL3 AIN3 net5 net4 vdda1 vssa1 vssd1 CONTROLLER
+x4 vccd1 DIGITALIN2 SEL2 AIN2 net3 net6 vdda1 vssa1 vssd1 CONTROLLER
+x1 net3 net6 net1 net5 VSSA1 net2 net4 1T1R_2x2
+.ends
+
+* expanding   symbol:  CONTROLLER.sym # of pins=9
+** sym_path: /home/impact/Desktop/APRIL TAPEOUT DESIGN/SCHEMATIC/CONTROLLER.sym
+** sch_path: /home/impact/Desktop/APRIL TAPEOUT DESIGN/SCHEMATIC/CONTROLLER.sch
+.subckt CONTROLLER VCC DigitalIN SEL AIN OUT1 OUT2 VC VSSA1 VSSD1
+*.PININFO VCC:B VSSA1:B DigitalIN:B SEL:B AIN:B OUT1:B OUT2:B VC:B VSSD1:B
+x1 VCC VSSD1 SEL demuxout1 demuxout2 DigitalIN DEMUX
+x2 VSSA1 VC NOTIN2 OUT2 AIN DIN2 switch
+x3 VSSA1 VC NOTIN1 OUT1 AIN DIN1 switch
+x4 VSSA1 VC DIN1 OUT1 net2 NOTIN1 switch
+x5 VSSA1 VC DIN2 OUT2 net1 NOTIN2 switch
+R1 VSSA1 net1 sky130_fd_pr__res_generic_po W=1 L=6.85 m=1
+R2 VSSA1 net2 sky130_fd_pr__res_generic_po W=1 L=6.85 m=1
+x6 VC VCC demuxout2 NOTIN2 DIN2 VSSD1 VSSA1 level_up_shifter_2x
+x7 VC VCC demuxout1 NOTIN1 DIN1 VSSD1 VSSA1 level_up_shifter_2x
+.ends
+
+
+* expanding   symbol:  1T1R_2x2.sym # of pins=7
+** sym_path: /home/impact/Desktop/APRIL TAPEOUT DESIGN/SCHEMATIC/1T1R_2x2.sym
+** sch_path: /home/impact/Desktop/APRIL TAPEOUT DESIGN/SCHEMATIC/1T1R_2x2.sch
+.subckt 1T1R_2x2 Bl1 bl2 wl1 sl1 VSS wl2 sl2
+*.PININFO bl2:B Bl1:B wl1:B wl2:B sl1:B sl2:B VSS:B
+XM4 net1 wl1 sl1 VSS sky130_fd_pr__nfet_g5v0d10v5 L=1 W=0.9 nf=1 m=1
+XM2 net2 wl1 sl1 VSS sky130_fd_pr__nfet_g5v0d10v5 L=1 W=0.9 nf=1 m=1
+XM1 net3 wl2 sl2 VSS sky130_fd_pr__nfet_g5v0d10v5 L=1 W=0.9 nf=1 m=1
+XM3 net4 wl2 sl2 VSS sky130_fd_pr__nfet_g5v0d10v5 L=1 W=0.9 nf=1 m=1
+XR1 bl2 net1 sky130_fd_pr__reram_reram_cell Tfilament_0=3.8e-9
+XR2 Bl1 net2 sky130_fd_pr__reram_reram_cell Tfilament_0=3.8e-9
+XR3 Bl1 net3 sky130_fd_pr__reram_reram_cell Tfilament_0=3.8e-9
+XR4 bl2 net4 sky130_fd_pr__reram_reram_cell Tfilament_0=3.8e-9
+.ends
+
+
+* expanding   symbol:  DEMUX.sym # of pins=6
+** sym_path: /home/impact/Desktop/APRIL TAPEOUT DESIGN/SCHEMATIC/DEMUX.sym
+** sch_path: /home/impact/Desktop/APRIL TAPEOUT DESIGN/SCHEMATIC/DEMUX.sch
+.subckt DEMUX VCC VSS SEL OUT1 OUT2 DigitalIN
+*.PININFO VCC:B VSS:B SEL:B OUT1:B OUT2:B DigitalIN:B
+x1 VCC VSS net1 DigitalIN OUT1 and
+x2 VCC VSS SEL DigitalIN OUT2 and
+x3 VCC VSS SEL net1 NOT
+.ends
+
+
+* expanding   symbol:  switch.sym # of pins=6
+** sym_path: /home/impact/Desktop/APRIL TAPEOUT DESIGN/SCHEMATIC/switch.sym
+** sch_path: /home/impact/Desktop/APRIL TAPEOUT DESIGN/SCHEMATIC/switch.sch
+.subckt switch vssa1 vcc notIN OUT AIN DIN
+*.PININFO OUT:B AIN:B DIN:B notIN:B vssa1:B vcc:B
+XM4 AIN DIN OUT vssa1 sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=20 nf=1 m=1
+XM6 AIN notIN OUT vcc sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=20 nf=1 m=1
+.ends
+
+
+* expanding   symbol:  level_up_shifter_2x.sym # of pins=7
+** sym_path: /home/impact/Desktop/APRIL TAPEOUT DESIGN/SCHEMATIC/level_up_shifter_2x.sym
+** sch_path: /home/impact/Desktop/APRIL TAPEOUT DESIGN/SCHEMATIC/level_up_shifter_2x.sch
+.subckt level_up_shifter_2x vdda1 vccd1 in outb out vssd1 vssa1
+*.PININFO in:I vccd1:B vssd1:B vdda1:B out:O outb:O vssa1:B
+XM1 inb in vssd1 vssd1 sky130_fd_pr__nfet_01v8 L=0.15 W=1 nf=1 m=1
+XM2 inb in vccd1 vccd1 sky130_fd_pr__pfet_01v8 L=0.15 W=1 nf=1 m=1
+XM3 outb in vssa1 vssa1 sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=20 nf=1 m=1
+XM4 vdda1 inb outb vssa1 sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=20 nf=1 m=1
+XM5 outb out vdda1 vdda1 sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=20 nf=1 m=1
+XM6 out inb vssa1 vssa1 sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=20 nf=1 m=1
+XM7 vdda1 in out vssa1 sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=20 nf=1 m=1
+XM8 out outb vdda1 vdda1 sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=20 nf=1 m=1
+.ends
+
+
+* expanding   symbol:  and.sym # of pins=5
+** sym_path: /home/impact/Desktop/APRIL TAPEOUT DESIGN/SCHEMATIC/and.sym
+** sch_path: /home/impact/Desktop/APRIL TAPEOUT DESIGN/SCHEMATIC/and.sch
+.subckt and vcc VSS A B OUT
+*.PININFO A:I B:I vcc:B VSS:B OUT:O
+XM5 net2 A net1 VSS sky130_fd_pr__nfet_01v8 L=0.15 W=1 nf=1 m=1
+XM2 net1 B VSS VSS sky130_fd_pr__nfet_01v8 L=0.15 W=1 nf=1 m=1
+XM3 OUT net2 VSS VSS sky130_fd_pr__nfet_01v8 L=0.15 W=1 nf=1 m=1
+XM6 OUT net2 vcc vcc sky130_fd_pr__pfet_01v8 L=0.15 W=1 nf=1 m=1
+XM1 vcc B net2 vcc sky130_fd_pr__pfet_01v8 L=0.15 W=1 nf=1 m=1
+XM4 net2 A vcc vcc sky130_fd_pr__pfet_01v8 L=0.15 W=1 nf=1 m=1
+.ends
+
+
+* expanding   symbol:  NOT.sym # of pins=4
+** sym_path: /home/impact/Desktop/APRIL TAPEOUT DESIGN/SCHEMATIC/NOT.sym
+** sch_path: /home/impact/Desktop/APRIL TAPEOUT DESIGN/SCHEMATIC/NOT.sch
+.subckt NOT vcc VSS SEL OUT
+*.PININFO OUT:O vcc:B VSS:B SEL:B
+XM1 OUT SEL VSS VSS sky130_fd_pr__nfet_01v8 L=0.15 W=1 nf=1 m=1
+XM2 OUT SEL vcc vcc sky130_fd_pr__pfet_01v8 L=0.15 W=1 nf=1 m=1
+.ends

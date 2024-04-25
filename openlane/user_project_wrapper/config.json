@@ -4,26 +4,28 @@
         "dir::../../verilog/rtl/defines.v",
         "dir::../../verilog/rtl/user_project_wrapper.v"
     ],
-    "ROUTING_CORES": 1,
+    
     "CLOCK_PERIOD": 25,
     "CLOCK_PORT": "wb_clk_i",
-    "CLOCK_NET": "mprj.clk",
-    "FP_PDN_MACRO_HOOKS": "mprj vccd1 vssd1 vccd1 vssd1",
+    "CLOCK_NET": "wb_clk_i",
+    
+    "VERILOG_FILES_BLACKBOX": "dir::../../verilog/gl/user_proj_IMPACT_HEAD.v",
+
+  
+    "ROUTING_CORES": 12,
+
+
+    "RSZ_DONT_TOUCH":["vdda1","vssa1","analog_io[14]","analog_io[15]","analog_io[16]"],
+    "FP_PDN_SKIPTRIM":true,
+
+    "FP_PDN_MACRO_HOOKS": "mprj vccd1 vssd1 vccd1 vssd1, mprj vccd2 vssd2 vccd2 vssd2, mprj vdda1 vssa1 vdda1 vssa1",
     "MACRO_PLACEMENT_CFG": "dir::macro.cfg",
     "MAGIC_DEF_LABELS": 0,
-    "VERILOG_FILES_BLACKBOX": [
-        "dir::../../verilog/gl/user_proj_example.v"
-    ],
-    "EXTRA_LEFS": "dir::../../lef/user_proj_example.lef",
-    "EXTRA_GDS_FILES": "dir::../../gds/user_proj_example.gds",
-    "EXTRA_LIBS": "dir::../../lib/user_proj_example.lib",
-    "EXTRA_SPEFS": [
-        "user_proj_example", 
-        "dir::../../spef/multicorner/user_proj_example.min.spef", 
-        "dir::../../spef/multicorner/user_proj_example.nom.spef", 
-        "dir::../../spef/multicorner/user_proj_example.max.spef"
-    ],
-    "BASE_SDC_FILE": "dir::base_user_project_wrapper.sdc",
+    
+    "EXTRA_LEFS":  "dir::../../lef/user_proj_IMPACT_HEAD.lef",
+   
+    "EXTRA_GDS_FILES": "dir::../../gds/user_proj_IMPACT_HEAD.gds",
+
     "IO_SYNC": 0,
     "MAX_TRANSITION_CONSTRAINT": 1.5,
     "RUN_LINTER": 0,

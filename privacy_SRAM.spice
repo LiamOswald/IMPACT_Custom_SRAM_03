@@ -1,0 +1,406 @@
+** sch_path: /home/impact/Documents/sram_6t_4t_diff_privacy_schematic/privacy_SRAM.sch
+.subckt privacy_SRAM vccd1 vssd1 vccd2 vssd2 PreB WL32 WL33 WL34 WL35 WL36 WL37 WL38 WL39 WL40 WL41
++ WL42 WL43 WL44 WL45 WL46 WL47 WL48 WL49 WL50 WL51 WL52 WL53 WL54 WL55 WL56 WL57 WL58 WL59 WL60 WL61 WL62
++ WL63 WL0 WL1 WL2 WL3 WL4 WL5 WL6 WL7 WL8 WL9 WL10 WL11 WL12 WL13 WL14 WL15 WL16 WL17 WL18 WL19 WL20 WL21
++ WL22 WL23 WL24 WL25 WL26 WL27 WL28 WL29 WL30 WL31 DataIn0 DataIn1 DataIn2 DataIn3 DataIn4 DataIn5
++ DataIn6 DataIn7 DataIn8 DataIn9 read_en write_en DataOut0 DataOut1 DataOut2 DataOut3 DataOut4 DataOut8
++ DataOut9 DataOut6 DataOut7 DataOut5
+*.PININFO vccd1:B vssd1:B vccd2:B vssd2:B PreB:I WL32:B WL33:B WL34:B WL35:B WL36:B WL37:B WL38:B
+*+ WL39:B WL40:B WL41:B WL42:B WL43:B WL44:B WL45:B WL46:B WL47:B WL48:B WL49:B WL50:B WL51:B WL52:B WL53:B
+*+ WL54:B WL55:B WL56:B WL57:B WL58:B WL59:B WL60:B WL61:B WL62:B WL63:B WL0:B WL1:B WL2:B WL3:B WL4:B WL5:B
+*+ WL6:B WL7:B WL8:B WL9:B WL10:B WL11:B WL12:B WL13:B WL14:B WL15:B WL16:B WL17:B WL18:B WL19:B WL20:B
+*+ WL21:B WL22:B WL23:B WL24:B WL25:B WL26:B WL27:B WL28:B WL29:B WL30:B WL31:B DataIn0:I DataIn1:I DataIn2:I
+*+ DataIn3:I DataIn4:I DataIn5:I DataIn6:I DataIn7:I DataIn8:I DataIn9:I read_en:I write_en:I DataOut0:O
+*+ DataOut1:O DataOut2:O DataOut3:O DataOut4:O DataOut8:O DataOut9:O DataOut6:O DataOut7:O DataOut5:O
+x1 PreB vccd2 vccd1 vssd1 vssd2 WL32 WL33 WL34 WL35 WL36 WL37 WL38 WL39 WL40 WL41 WL42 WL43 WL44
++ WL45 read_en WL46 write_en WL47 DataIn9 WL48 DataOut9 WL49 WL50 WL51 DataIn8 WL52 WL53 WL54 DataOut8
++ WL55 WL56 DataIn7 WL57 WL58 DataOut7 WL59 WL60 WL61 DataIn6 WL62 WL63 DataOut6 DataIn5 DataOut5 DataIn4
++ DataOut4 DataIn3 DataOut3 DataIn2 DataOut2 DataIn1 DataOut1 WL0 DataIn0 WL1 WL2 DataOut0 WL3 WL4 WL5 WL6 WL7
++ WL8 WL9 WL10 WL11 WL12 WL13 WL14 WL15 WL16 WL17 WL18 WL19 WL20 WL21 WL22 WL23 WL24 WL25 WL26 WL27 WL28
++ WL29 WL30 WL31 sram_6t_4t_schem_read_write
+.ends
+
+* expanding   symbol:
+*+  /home/impact/Documents/sram_6t_4t_diff_privacy_schematic/sram_6t_4t_schem_read_write.sym # of pins=91
+** sym_path:
+*+ /home/impact/Documents/sram_6t_4t_diff_privacy_schematic/sram_6t_4t_schem_read_write.sym
+** sch_path:
+*+ /home/impact/Documents/sram_6t_4t_diff_privacy_schematic/sram_6t_4t_schem_read_write.sch
+.subckt sram_6t_4t_schem_read_write PreB vdd_low vdd gnd gnd_low WL32 WL33 WL34 WL35 WL36 WL37 WL38
++ WL39 WL40 WL41 WL42 WL43 WL44 WL45 read_en WL46 write_en WL47 DataIn9 WL48 DataOut9 WL49 WL50 WL51
++ DataIn8 WL52 WL53 WL54 DataOut8 WL55 WL56 DataIn7 WL57 WL58 DataOut7 WL59 WL60 WL61 DataIn6 WL62 WL63
++ DataOut6 DataIn5 DataOut5 DataIn4 DataOut4 DataIn3 DataOut3 DataIn2 DataOut2 DataIn1 DataOut1 WL0 DataIn0
++ WL1 WL2 DataOut0 WL3 WL4 WL5 WL6 WL7 WL8 WL9 WL10 WL11 WL12 WL13 WL14 WL15 WL16 WL17 WL18 WL19 WL20
++ WL21 WL22 WL23 WL24 WL25 WL26 WL27 WL28 WL29 WL30 WL31
+*.PININFO WL32:B WL33:B WL34:B vdd:B gnd:B vdd_low:B DataIn0:I DataIn1:I DataIn2:I DataIn3:I
+*+ DataIn4:I DataIn5:I DataIn6:I DataIn7:I DataIn8:I DataIn9:I DataOut0:O DataOut1:O DataOut2:O DataOut3:O
+*+ DataOut4:O DataOut8:O DataOut9:O DataOut6:O DataOut7:O DataOut5:O PreB:I WL0:B WL1:B WL2:B WL3:B WL4:B WL5:B
+*+ WL6:B WL7:B WL8:B WL9:B WL10:B WL11:B WL12:B WL13:B WL14:B WL15:B WL16:B WL17:B WL18:B WL19:B WL20:B
+*+ WL21:B WL22:B WL23:B WL24:B WL25:B WL26:B WL27:B WL28:B WL29:B WL30:B WL31:B WL35:B WL36:B WL37:B WL38:B
+*+ WL39:B WL40:B WL41:B WL42:B WL43:B WL44:B WL45:B WL46:B WL47:B WL48:B WL49:B WL50:B WL51:B WL52:B WL53:B
+*+ WL54:B WL55:B WL56:B WL57:B WL58:B WL59:B WL60:B WL61:B WL62:B WL63:B read_en:I write_en:I gnd_low:B
+x1 vdd_low vdd gnd BL4 BL1 BL2 BL8 BL0 BL5 BL6 BL3 BL7 BL9 BLb9 BLb8 BLb7 BLb6 BLb4 BLb3 BLb2 BLb1
++ BLb5 BLb0 net1 net2 net3 net4 net5 net6 net7 net8 net9 net10 net11 net12 net13 net14 net15 net16 net17
++ net18 net19 net20 net21 net22 net23 net24 net25 net26 net27 net28 net29 net30 net31 net32 gnd_low
++ sram_4t_32x10_schem
+x2 vdd_low vdd gnd BL4 BL1 BL2 BL8 BL0 BL5 BL6 BL3 BL7 BL9 BLb9 BLb8 BLb7 BLb6 BLb4 BLb3 BLb2 BLb1
++ BLb5 BLb0 net33 net34 net35 net36 net37 net38 net39 net40 net41 net42 net43 net44 net45 net46 net47
++ net48 net49 net50 net51 net52 net53 net54 net55 net56 net57 net58 net59 net60 net61 net62 net63 net64
++ gnd_low sram_6t_32x10_schem
+x34 vdd PreB BLb0 BL0 Precharge_circuit
+x35 vdd PreB BLb1 BL1 Precharge_circuit
+x36 vdd PreB BLb2 BL2 Precharge_circuit
+x37 vdd PreB BLb3 BL3 Precharge_circuit
+x38 vdd PreB BLb4 BL4 Precharge_circuit
+x39 vdd PreB BLb5 BL5 Precharge_circuit
+x40 vdd_low PreB BLb6 BL6 Precharge_circuit
+x41 vdd_low PreB BLb7 BL7 Precharge_circuit
+x42 vdd_low PreB BLb8 BL8 Precharge_circuit
+x43 vdd_low PreB BLb9 BL9 Precharge_circuit
+x87 gnd WL0 net33 vdd buffer
+x3 gnd WL32 net1 vdd inverter
+x45 BL9 BLb9 read_en write_en vdd_low gnd_low DataOut9 DataIn9 read_write_circuit_schem
+x4 gnd WL33 net2 vdd inverter
+x5 gnd WL34 net3 vdd inverter
+x6 gnd WL35 net4 vdd inverter
+x7 gnd WL36 net5 vdd inverter
+x8 gnd WL37 net6 vdd inverter
+x9 gnd WL38 net7 vdd inverter
+x10 gnd WL39 net8 vdd inverter
+x11 gnd WL40 net9 vdd inverter
+x12 gnd WL41 net10 vdd inverter
+x13 gnd WL42 net11 vdd inverter
+x14 gnd WL43 net12 vdd inverter
+x15 gnd WL44 net13 vdd inverter
+x16 gnd WL45 net14 vdd inverter
+x17 gnd WL46 net15 vdd inverter
+x18 gnd WL47 net16 vdd inverter
+x19 gnd WL48 net17 vdd inverter
+x20 gnd WL49 net18 vdd inverter
+x21 gnd WL50 net19 vdd inverter
+x22 gnd WL51 net20 vdd inverter
+x23 gnd WL52 net21 vdd inverter
+x24 gnd WL53 net22 vdd inverter
+x25 gnd WL54 net23 vdd inverter
+x26 gnd WL55 net24 vdd inverter
+x27 gnd WL56 net25 vdd inverter
+x28 gnd WL57 net26 vdd inverter
+x29 gnd WL58 net27 vdd inverter
+x30 gnd WL59 net28 vdd inverter
+x31 gnd WL60 net29 vdd inverter
+x32 gnd WL61 net30 vdd inverter
+x33 gnd WL62 net31 vdd inverter
+x44 gnd WL63 net32 vdd inverter
+x55 gnd WL1 net34 vdd buffer
+x56 gnd WL2 net35 vdd buffer
+x57 gnd WL3 net36 vdd buffer
+x58 gnd WL4 net37 vdd buffer
+x59 gnd WL5 net38 vdd buffer
+x60 gnd WL6 net39 vdd buffer
+x61 gnd WL7 net40 vdd buffer
+x62 gnd WL8 net41 vdd buffer
+x63 gnd WL9 net42 vdd buffer
+x64 gnd WL10 net43 vdd buffer
+x65 gnd WL11 net44 vdd buffer
+x66 gnd WL12 net45 vdd buffer
+x67 gnd WL13 net46 vdd buffer
+x68 gnd WL14 net47 vdd buffer
+x69 gnd WL15 net48 vdd buffer
+x70 gnd WL16 net49 vdd buffer
+x71 gnd WL17 net50 vdd buffer
+x72 gnd WL18 net51 vdd buffer
+x73 gnd WL19 net52 vdd buffer
+x74 gnd WL20 net53 vdd buffer
+x75 gnd WL21 net54 vdd buffer
+x76 gnd WL22 net55 vdd buffer
+x77 gnd WL23 net56 vdd buffer
+x78 gnd WL24 net57 vdd buffer
+x79 gnd WL25 net58 vdd buffer
+x80 gnd WL26 net59 vdd buffer
+x81 gnd WL27 net60 vdd buffer
+x82 gnd WL28 net61 vdd buffer
+x83 gnd WL29 net62 vdd buffer
+x84 gnd WL30 net63 vdd buffer
+x85 gnd WL31 net64 vdd buffer
+x46 BL8 BLb8 read_en write_en vdd_low gnd_low DataOut8 DataIn8 read_write_circuit_schem
+x47 BL7 BLb7 read_en write_en vdd_low gnd_low DataOut7 DataIn7 read_write_circuit_schem
+x48 BL6 BLb6 read_en write_en vdd_low gnd_low DataOut6 DataIn6 read_write_circuit_schem
+x49 BL5 BLb5 read_en write_en vdd gnd DataOut5 DataIn5 read_write_circuit_schem
+x50 BL4 BLb4 read_en write_en vdd gnd DataOut4 DataIn4 read_write_circuit_schem
+x51 BL3 BLb3 read_en write_en vdd gnd DataOut3 DataIn3 read_write_circuit_schem
+x52 BL2 BLb2 read_en write_en vdd gnd DataOut2 DataIn2 read_write_circuit_schem
+x53 BL1 BLb1 read_en write_en vdd gnd DataOut1 DataIn1 read_write_circuit_schem
+x54 BL0 BLb0 read_en write_en vdd gnd DataOut0 DataIn0 read_write_circuit_schem
+.ends
+
+
+* expanding   symbol:
+*+  /home/impact/Documents/sram_6t_4t_diff_privacy_schematic/sram_4t/sram_4t_32x10_schem.sym # of pins=56
+** sym_path:
+*+ /home/impact/Documents/sram_6t_4t_diff_privacy_schematic/sram_4t/sram_4t_32x10_schem.sym
+** sch_path:
+*+ /home/impact/Documents/sram_6t_4t_diff_privacy_schematic/sram_4t/sram_4t_32x10_schem.sch
+.subckt sram_4t_32x10_schem vdd_low vdd gnd BL4 BL1 BL2 BL8 BL0 BL5 BL6 BL3 BL7 BL9 BLb9 BLb8 BLb7
++ BLb6 BLb4 BLb3 BLb2 BLb1 BLb5 BLb0 WL0 WL1 WL2 WL3 WL4 WL5 WL6 WL7 WL8 WL9 WL10 WL11 WL12 WL13 WL14 WL15
++ WL16 WL17 WL18 WL19 WL20 WL21 WL22 WL23 WL24 WL25 WL26 WL27 WL28 WL29 WL30 WL31 gnd_low
+*.PININFO WL0:B WL1:B WL2:B WL3:B WL4:B WL5:B WL6:B WL7:B WL8:B WL9:B WL10:B WL11:B WL12:B WL13:B
+*+ WL14:B WL15:B WL16:B WL17:B WL18:B WL19:B WL20:B WL21:B WL22:B WL23:B WL24:B WL25:B WL26:B WL27:B WL28:B
+*+ WL29:B WL30:B WL31:B vdd:B gnd:B BL0:B BLb0:B BL1:B BLb1:B BL2:B BLb2:B BL3:B BLb3:B BL4:B BLb4:B BL5:B
+*+ BLb5:B BL6:B BLb6:B BL7:B BLb7:B BL8:B BLb8:B BL9:B BLb9:B vdd_low:B gnd_low:B
+x1 vdd gnd BL0 BLb0 WL0 WL1 WL2 WL3 WL4 WL5 WL6 WL7 WL8 WL9 WL10 WL11 WL12 WL13 WL14 WL15 WL16 WL17
++ WL18 WL19 WL20 WL21 WL22 WL23 WL24 WL25 WL26 WL27 WL28 WL29 WL30 WL31 sram_4t_32x1_schem
+x2 vdd gnd BLb1 BL1 WL0 WL1 WL2 WL3 WL4 WL5 WL6 WL7 WL8 WL9 WL10 WL11 WL12 WL13 WL14 WL15 WL16 WL17
++ WL18 WL19 WL20 WL21 WL22 WL23 WL24 WL25 WL26 WL27 WL28 WL29 WL30 WL31 sram_4t_32x1_schem
+x3 vdd gnd BL2 BLb2 WL0 WL1 WL2 WL3 WL4 WL5 WL6 WL7 WL8 WL9 WL10 WL11 WL12 WL13 WL14 WL15 WL16 WL17
++ WL18 WL19 WL20 WL21 WL22 WL23 WL24 WL25 WL26 WL27 WL28 WL29 WL30 WL31 sram_4t_32x1_schem
+x4 vdd gnd BLb3 BL3 WL0 WL1 WL2 WL3 WL4 WL5 WL6 WL7 WL8 WL9 WL10 WL11 WL12 WL13 WL14 WL15 WL16 WL17
++ WL18 WL19 WL20 WL21 WL22 WL23 WL24 WL25 WL26 WL27 WL28 WL29 WL30 WL31 sram_4t_32x1_schem
+x5 vdd gnd BL4 BLb4 WL0 WL1 WL2 WL3 WL4 WL5 WL6 WL7 WL8 WL9 WL10 WL11 WL12 WL13 WL14 WL15 WL16 WL17
++ WL18 WL19 WL20 WL21 WL22 WL23 WL24 WL25 WL26 WL27 WL28 WL29 WL30 WL31 sram_4t_32x1_schem
+x6 vdd gnd BLb5 BL5 WL0 WL1 WL2 WL3 WL4 WL5 WL6 WL7 WL8 WL9 WL10 WL11 WL12 WL13 WL14 WL15 WL16 WL17
++ WL18 WL19 WL20 WL21 WL22 WL23 WL24 WL25 WL26 WL27 WL28 WL29 WL30 WL31 sram_4t_32x1_schem
+x7 vdd_low gnd_low BL6 BLb6 WL0 WL1 WL2 WL3 WL4 WL5 WL6 WL7 WL8 WL9 WL10 WL11 WL12 WL13 WL14 WL15
++ WL16 WL17 WL18 WL19 WL20 WL21 WL22 WL23 WL24 WL25 WL26 WL27 WL28 WL29 WL30 WL31 sram_4t_32x1_schem
+x8 vdd_low gnd_low BLb7 BL7 WL0 WL1 WL2 WL3 WL4 WL5 WL6 WL7 WL8 WL9 WL10 WL11 WL12 WL13 WL14 WL15
++ WL16 WL17 WL18 WL19 WL20 WL21 WL22 WL23 WL24 WL25 WL26 WL27 WL28 WL29 WL30 WL31 sram_4t_32x1_schem
+x9 vdd_low gnd_low BL8 BLb8 WL0 WL1 WL2 WL3 WL4 WL5 WL6 WL7 WL8 WL9 WL10 WL11 WL12 WL13 WL14 WL15
++ WL16 WL17 WL18 WL19 WL20 WL21 WL22 WL23 WL24 WL25 WL26 WL27 WL28 WL29 WL30 WL31 sram_4t_32x1_schem
+x10 vdd_low gnd_low BLb9 BL9 WL0 WL1 WL2 WL3 WL4 WL5 WL6 WL7 WL8 WL9 WL10 WL11 WL12 WL13 WL14 WL15
++ WL16 WL17 WL18 WL19 WL20 WL21 WL22 WL23 WL24 WL25 WL26 WL27 WL28 WL29 WL30 WL31 sram_4t_32x1_schem
+.ends
+
+
+* expanding   symbol:
+*+  /home/impact/Documents/sram_6t_4t_diff_privacy_schematic/sram_6t/sram_6t_32x10_schem.sym # of pins=56
+** sym_path:
+*+ /home/impact/Documents/sram_6t_4t_diff_privacy_schematic/sram_6t/sram_6t_32x10_schem.sym
+** sch_path:
+*+ /home/impact/Documents/sram_6t_4t_diff_privacy_schematic/sram_6t/sram_6t_32x10_schem.sch
+.subckt sram_6t_32x10_schem vdd_low vdd gnd BL4 BL1 BL2 BL8 BL0 BL5 BL6 BL3 BL7 BL9 BLb9 BLb8 BLb7
++ BLb6 BLb4 BLb3 BLb2 BLb1 BLb5 BLb0 WL0 WL1 WL2 WL3 WL4 WL5 WL6 WL7 WL8 WL9 WL10 WL11 WL12 WL13 WL14 WL15
++ WL16 WL17 WL18 WL19 WL20 WL21 WL22 WL23 WL24 WL25 WL26 WL27 WL28 WL29 WL30 WL31 gnd_low
+*.PININFO WL0:B WL1:B WL2:B WL3:B WL4:B WL5:B WL6:B WL7:B WL8:B WL9:B WL10:B WL11:B WL12:B WL13:B
+*+ WL14:B WL15:B WL16:B WL17:B WL18:B WL19:B WL20:B WL21:B WL22:B WL23:B WL24:B WL25:B WL26:B WL27:B WL28:B
+*+ WL29:B WL30:B WL31:B vdd:B gnd_low:B BL0:B BLb0:B BL1:B BLb1:B BL2:B BLb2:B BL3:B BLb3:B BL4:B BLb4:B
+*+ BL5:B BLb5:B BL6:B BLb6:B BL7:B BLb7:B BL8:B BLb8:B BL9:B BLb9:B vdd_low:B gnd:B
+x1 vdd gnd BL0 BLb0 WL0 WL1 WL2 WL3 WL4 WL5 WL6 WL7 WL8 WL9 WL10 WL11 WL12 WL13 WL14 WL15 WL16 WL17
++ WL18 WL19 WL20 WL21 WL22 WL23 WL24 WL25 WL26 WL27 WL28 WL29 WL30 WL31 sram_6t_32x1_schem
+x2 vdd gnd BL1 BLb1 WL0 WL1 WL2 WL3 WL4 WL5 WL6 WL7 WL8 WL9 WL10 WL11 WL12 WL13 WL14 WL15 WL16 WL17
++ WL18 WL19 WL20 WL21 WL22 WL23 WL24 WL25 WL26 WL27 WL28 WL29 WL30 WL31 sram_6t_32x1_schem
+x3 vdd gnd BL2 BLb2 WL0 WL1 WL2 WL3 WL4 WL5 WL6 WL7 WL8 WL9 WL10 WL11 WL12 WL13 WL14 WL15 WL16 WL17
++ WL18 WL19 WL20 WL21 WL22 WL23 WL24 WL25 WL26 WL27 WL28 WL29 WL30 WL31 sram_6t_32x1_schem
+x4 vdd gnd BL3 BLb3 WL0 WL1 WL2 WL3 WL4 WL5 WL6 WL7 WL8 WL9 WL10 WL11 WL12 WL13 WL14 WL15 WL16 WL17
++ WL18 WL19 WL20 WL21 WL22 WL23 WL24 WL25 WL26 WL27 WL28 WL29 WL30 WL31 sram_6t_32x1_schem
+x5 vdd gnd BL4 BLb4 WL0 WL1 WL2 WL3 WL4 WL5 WL6 WL7 WL8 WL9 WL10 WL11 WL12 WL13 WL14 WL15 WL16 WL17
++ WL18 WL19 WL20 WL21 WL22 WL23 WL24 WL25 WL26 WL27 WL28 WL29 WL30 WL31 sram_6t_32x1_schem
+x6 vdd gnd BL5 BLb5 WL0 WL1 WL2 WL3 WL4 WL5 WL6 WL7 WL8 WL9 WL10 WL11 WL12 WL13 WL14 WL15 WL16 WL17
++ WL18 WL19 WL20 WL21 WL22 WL23 WL24 WL25 WL26 WL27 WL28 WL29 WL30 WL31 sram_6t_32x1_schem
+x7 vdd_low gnd_low BL6 BLb6 WL0 WL1 WL2 WL3 WL4 WL5 WL6 WL7 WL8 WL9 WL10 WL11 WL12 WL13 WL14 WL15
++ WL16 WL17 WL18 WL19 WL20 WL21 WL22 WL23 WL24 WL25 WL26 WL27 WL28 WL29 WL30 WL31 sram_6t_32x1_schem
+x8 vdd_low gnd_low BL7 BLb7 WL0 WL1 WL2 WL3 WL4 WL5 WL6 WL7 WL8 WL9 WL10 WL11 WL12 WL13 WL14 WL15
++ WL16 WL17 WL18 WL19 WL20 WL21 WL22 WL23 WL24 WL25 WL26 WL27 WL28 WL29 WL30 WL31 sram_6t_32x1_schem
+x9 vdd_low gnd_low BL8 BLb8 WL0 WL1 WL2 WL3 WL4 WL5 WL6 WL7 WL8 WL9 WL10 WL11 WL12 WL13 WL14 WL15
++ WL16 WL17 WL18 WL19 WL20 WL21 WL22 WL23 WL24 WL25 WL26 WL27 WL28 WL29 WL30 WL31 sram_6t_32x1_schem
+x10 vdd_low gnd_low BL9 BLb9 WL0 WL1 WL2 WL3 WL4 WL5 WL6 WL7 WL8 WL9 WL10 WL11 WL12 WL13 WL14 WL15
++ WL16 WL17 WL18 WL19 WL20 WL21 WL22 WL23 WL24 WL25 WL26 WL27 WL28 WL29 WL30 WL31 sram_6t_32x1_schem
+.ends
+
+
+* expanding   symbol:  /home/impact/Documents/custom_6T_SRAM/Precharge_circuit.sym # of pins=4
+** sym_path: /home/impact/Documents/custom_6T_SRAM/Precharge_circuit.sym
+** sch_path: /home/impact/Documents/custom_6T_SRAM/Precharge_circuit.sch
+.subckt Precharge_circuit vcc PreB Blb Bl
+*.PININFO vcc:B PreB:I Bl:B Blb:B
+XM9 Blb PreB vcc vcc sky130_fd_pr__pfet_01v8 L=0.18 W=0.72 nf=1 m=1
+XM10 Bl PreB vcc vcc sky130_fd_pr__pfet_01v8 L=0.18 W=0.72 nf=1 m=1
+.ends
+
+
+* expanding   symbol:  /home/impact/Documents/sram_6t_4t_diff_privacy_schematic/buffer/buffer.sym #
+*+ of pins=4
+** sym_path: /home/impact/Documents/sram_6t_4t_diff_privacy_schematic/buffer/buffer.sym
+** sch_path: /home/impact/Documents/sram_6t_4t_diff_privacy_schematic/buffer/buffer.sch
+.subckt buffer gnd In Out vcc
+*.PININFO In:B Out:B gnd:B vcc:B
+XM6 Out net1 gnd gnd sky130_fd_pr__nfet_01v8 L=0.15 W=1.68 nf=1 m=1
+XM1 net1 In gnd gnd sky130_fd_pr__nfet_01v8 L=0.15 W=1.68 nf=1 m=1
+XM10 Out net1 vcc vcc sky130_fd_pr__pfet_01v8 L=0.15 W=0.84 nf=1 m=1
+XM5 net1 In vcc vcc sky130_fd_pr__pfet_01v8 L=0.15 W=0.84 nf=1 m=1
+.ends
+
+
+* expanding   symbol:
+*+  /home/impact/Documents/sram_6t_4t_diff_privacy_schematic/inverter/inverter.sym # of pins=4
+** sym_path: /home/impact/Documents/sram_6t_4t_diff_privacy_schematic/inverter/inverter.sym
+** sch_path: /home/impact/Documents/sram_6t_4t_diff_privacy_schematic/inverter/inverter.sch
+.subckt inverter gnd In Out vcc
+*.PININFO In:B Out:B gnd:B vcc:B
+XM1 Out In gnd gnd sky130_fd_pr__nfet_01v8 L=0.15 W=1.68 nf=1 m=1
+XM5 Out In vcc vcc sky130_fd_pr__pfet_01v8 L=0.15 W=0.84 nf=1 m=1
+.ends
+
+
+* expanding   symbol:
+*+  /home/impact/Documents/sram_6t_4t_diff_privacy_schematic/sense_amp/read_write_circuit_schem.sym # of pins=8
+** sym_path:
+*+ /home/impact/Documents/sram_6t_4t_diff_privacy_schematic/sense_amp/read_write_circuit_schem.sym
+** sch_path:
+*+ /home/impact/Documents/sram_6t_4t_diff_privacy_schematic/sense_amp/read_write_circuit_schem.sch
+.subckt read_write_circuit_schem BL BLb read_en write_en vdd gnd DataOut DataIn
+*.PININFO write_en:I read_en:I gnd:B vdd:B DataOut:O DataIn:I BL:B BLb:B
+x1 vdd DataOut BL BLb read_en gnd sense_amp
+x2 BL BLb write_en vdd DataIn gnd Write_enable_circuit
+.ends
+
+
+* expanding   symbol:
+*+  /home/impact/Documents/sram_6t_4t_diff_privacy_schematic/sram_4t/sram_4t_32x1_schem.sym # of pins=36
+** sym_path: /home/impact/Documents/sram_6t_4t_diff_privacy_schematic/sram_4t/sram_4t_32x1_schem.sym
+** sch_path: /home/impact/Documents/sram_6t_4t_diff_privacy_schematic/sram_4t/sram_4t_32x1_schem.sch
+.subckt sram_4t_32x1_schem vdd gnd BL BLb WL0 WL1 WL2 WL3 WL4 WL5 WL6 WL7 WL8 WL9 WL10 WL11 WL12
++ WL13 WL14 WL15 WL16 WL17 WL18 WL19 WL20 WL21 WL22 WL23 WL24 WL25 WL26 WL27 WL28 WL29 WL30 WL31
+*.PININFO WL0:B WL1:B WL2:B WL3:B WL4:B WL5:B WL6:B WL7:B WL8:B WL9:B WL10:B WL11:B WL12:B WL13:B
+*+ WL14:B WL15:B WL16:B WL17:B WL18:B WL19:B WL20:B WL21:B WL22:B WL23:B WL24:B WL25:B WL26:B WL27:B WL28:B
+*+ WL29:B WL30:B WL31:B vdd:B gnd:B BL:B BLb:B
+x1 BL BLb WL0 vdd gnd sram_4t
+x2 BL BLb WL1 vdd gnd sram_4t
+x3 BL BLb WL2 vdd gnd sram_4t
+x4 BL BLb WL3 vdd gnd sram_4t
+x5 BL BLb WL4 vdd gnd sram_4t
+x6 BL BLb WL5 vdd gnd sram_4t
+x7 BL BLb WL6 vdd gnd sram_4t
+x8 BL BLb WL7 vdd gnd sram_4t
+x9 BL BLb WL8 vdd gnd sram_4t
+x10 BL BLb WL9 vdd gnd sram_4t
+x11 BL BLb WL10 vdd gnd sram_4t
+x12 BL BLb WL11 vdd gnd sram_4t
+x13 BL BLb WL12 vdd gnd sram_4t
+x14 BL BLb WL13 vdd gnd sram_4t
+x15 BL BLb WL14 vdd gnd sram_4t
+x16 BL BLb WL15 vdd gnd sram_4t
+x17 BL BLb WL16 vdd gnd sram_4t
+x18 BL BLb WL17 vdd gnd sram_4t
+x19 BL BLb WL18 vdd gnd sram_4t
+x20 BL BLb WL19 vdd gnd sram_4t
+x21 BL BLb WL20 vdd gnd sram_4t
+x22 BL BLb WL21 vdd gnd sram_4t
+x23 BL BLb WL22 vdd gnd sram_4t
+x24 BL BLb WL23 vdd gnd sram_4t
+x25 BL BLb WL24 vdd gnd sram_4t
+x26 BL BLb WL25 vdd gnd sram_4t
+x27 BL BLb WL26 vdd gnd sram_4t
+x28 BL BLb WL27 vdd gnd sram_4t
+x29 BL BLb WL28 vdd gnd sram_4t
+x30 BL BLb WL29 vdd gnd sram_4t
+x31 BL BLb WL30 vdd gnd sram_4t
+x32 BL BLb WL31 vdd gnd sram_4t
+.ends
+
+
+* expanding   symbol:
+*+  /home/impact/Documents/sram_6t_4t_diff_privacy_schematic/sram_6t/sram_6t_32x1_schem.sym # of pins=36
+** sym_path: /home/impact/Documents/sram_6t_4t_diff_privacy_schematic/sram_6t/sram_6t_32x1_schem.sym
+** sch_path: /home/impact/Documents/sram_6t_4t_diff_privacy_schematic/sram_6t/sram_6t_32x1_schem.sch
+.subckt sram_6t_32x1_schem vdd gnd BL BLb WL0 WL1 WL2 WL3 WL4 WL5 WL6 WL7 WL8 WL9 WL10 WL11 WL12
++ WL13 WL14 WL15 WL16 WL17 WL18 WL19 WL20 WL21 WL22 WL23 WL24 WL25 WL26 WL27 WL28 WL29 WL30 WL31
+*.PININFO WL0:B WL1:B WL2:B WL3:B WL4:B WL5:B WL6:B WL7:B WL8:B WL9:B WL10:B WL11:B WL12:B WL13:B
+*+ WL14:B WL15:B WL16:B WL17:B WL18:B WL19:B WL20:B WL21:B WL22:B WL23:B WL24:B WL25:B WL26:B WL27:B WL28:B
+*+ WL29:B WL30:B WL31:B vdd:B gnd:B BL:B BLb:B
+x1 BL BLb WL0 vdd gnd sram_6t
+x2 BL BLb WL1 vdd gnd sram_6t
+x3 BL BLb WL2 vdd gnd sram_6t
+x4 BL BLb WL3 vdd gnd sram_6t
+x5 BL BLb WL4 vdd gnd sram_6t
+x6 BL BLb WL5 vdd gnd sram_6t
+x7 BL BLb WL6 vdd gnd sram_6t
+x8 BL BLb WL7 vdd gnd sram_6t
+x9 BL BLb WL8 vdd gnd sram_6t
+x10 BL BLb WL9 vdd gnd sram_6t
+x11 BL BLb WL10 vdd gnd sram_6t
+x12 BL BLb WL11 vdd gnd sram_6t
+x13 BL BLb WL12 vdd gnd sram_6t
+x14 BL BLb WL13 vdd gnd sram_6t
+x15 BL BLb WL14 vdd gnd sram_6t
+x16 BL BLb WL15 vdd gnd sram_6t
+x17 BL BLb WL16 vdd gnd sram_6t
+x18 BL BLb WL17 vdd gnd sram_6t
+x19 BL BLb WL18 vdd gnd sram_6t
+x20 BL BLb WL19 vdd gnd sram_6t
+x21 BL BLb WL20 vdd gnd sram_6t
+x22 BL BLb WL21 vdd gnd sram_6t
+x23 BL BLb WL22 vdd gnd sram_6t
+x24 BL BLb WL23 vdd gnd sram_6t
+x25 BL BLb WL24 vdd gnd sram_6t
+x26 BL BLb WL25 vdd gnd sram_6t
+x27 BL BLb WL26 vdd gnd sram_6t
+x28 BL BLb WL27 vdd gnd sram_6t
+x29 BL BLb WL28 vdd gnd sram_6t
+x30 BL BLb WL29 vdd gnd sram_6t
+x31 BL BLb WL30 vdd gnd sram_6t
+x32 BL BLb WL31 vdd gnd sram_6t
+.ends
+
+
+* expanding   symbol:
+*+  /home/impact/Documents/sram_6t_4t_diff_privacy_schematic/sense_amp/sense_amp.sym # of pins=6
+** sym_path: /home/impact/Documents/sram_6t_4t_diff_privacy_schematic/sense_amp/sense_amp.sym
+** sch_path: /home/impact/Documents/sram_6t_4t_diff_privacy_schematic/sense_amp/sense_amp.sch
+.subckt sense_amp vcc BlOut Bl Blb readEn gnd
+*.PININFO vcc:B gnd:B readEn:B Blb:B Bl:B BlOut:B
+XM1 net3 net1 vcc vcc sky130_fd_pr__pfet_01v8 L=0.18 W=0.84 nf=1 m=1
+XM2 net3 Bl net2 gnd sky130_fd_pr__nfet_01v8 L=0.18 W=0.42 nf=1 m=1
+XM3 net1 net1 vcc vcc sky130_fd_pr__pfet_01v8 L=0.18 W=0.84 nf=1 m=1
+XM4 net1 Blb net2 gnd sky130_fd_pr__nfet_01v8 L=0.18 W=0.42 nf=1 m=1
+XM5 BlOut net3 vcc vcc sky130_fd_pr__pfet_01v8 L=0.18 W=0.84 nf=1 m=1
+XM6 BlOut net3 gnd gnd sky130_fd_pr__nfet_01v8 L=0.18 W=0.42 nf=1 m=1
+XM7 net2 readEn gnd gnd sky130_fd_pr__nfet_01v8 L=0.18 W=1.26 nf=1 m=1
+.ends
+
+
+* expanding   symbol:
+*+  /home/impact/Documents/sram_6t_4t_diff_privacy_schematic/write_driver/Write_enable_circuit.sym # of pins=6
+** sym_path:
+*+ /home/impact/Documents/sram_6t_4t_diff_privacy_schematic/write_driver/Write_enable_circuit.sym
+** sch_path:
+*+ /home/impact/Documents/sram_6t_4t_diff_privacy_schematic/write_driver/Write_enable_circuit.sch
+.subckt Write_enable_circuit Bl Blb Write_en vcc DATA gnd
+*.PININFO Bl:B Blb:B vcc:B gnd:B DATA:I Write_en:I
+XM5 net2 net1 vcc vcc sky130_fd_pr__pfet_01v8 L=0.15 W=0.84 nf=1 m=1
+XM6 net2 net1 gnd gnd sky130_fd_pr__nfet_01v8 L=0.15 W=1.68 nf=1 m=1
+XM11 Blb Write_en net2 gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.42 nf=1 m=1
+XM12 Bl Write_en net1 gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.42 nf=1 m=1
+XM1 net1 net3 gnd gnd sky130_fd_pr__nfet_01v8 L=0.15 W=1.68 nf=1 m=1
+XM8 net3 DATA gnd gnd sky130_fd_pr__nfet_01v8 L=0.15 W=1.68 nf=1 m=1
+XM10 net1 net3 vcc vcc sky130_fd_pr__pfet_01v8 L=0.15 W=0.84 nf=1 m=1
+XM2 net3 DATA vcc vcc sky130_fd_pr__pfet_01v8 L=0.15 W=0.84 nf=1 m=1
+.ends
+
+
+* expanding   symbol:  /home/impact/Documents/sram_6t_4t_diff_privacy_schematic/sram_4t/sram_4t.sym
+*+ # of pins=5
+** sym_path: /home/impact/Documents/sram_6t_4t_diff_privacy_schematic/sram_4t/sram_4t.sym
+** sch_path: /home/impact/Documents/sram_6t_4t_diff_privacy_schematic/sram_4t/sram_4t.sch
+.subckt sram_4t BL BLb WL vdd gnd
+*.PININFO WL:B BL:B BLb:B vdd:B gnd:B
+XM3 Q WL BL vdd sky130_fd_pr__pfet_01v8 L=0.15 W=0.42 nf=1 m=1
+XM4 Q Qb gnd gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.42 nf=1 m=1
+XM5 Qb Q gnd gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.42 nf=1 m=1
+XM6 Qb WL BLb vdd sky130_fd_pr__pfet_01v8 L=0.15 W=0.42 nf=1 m=1
+.ends
+
+
+* expanding   symbol:  /home/impact/Documents/sram_6t_4t_diff_privacy_schematic/sram_6t/sram_6t.sym
+*+ # of pins=5
+** sym_path: /home/impact/Documents/sram_6t_4t_diff_privacy_schematic/sram_6t/sram_6t.sym
+** sch_path: /home/impact/Documents/sram_6t_4t_diff_privacy_schematic/sram_6t/sram_6t.sch
+.subckt sram_6t BL BLb WL vdd gnd
+*.PININFO gnd:B BLb:B BL:B WL:B vdd:B
+XM1 Qb Q vdd vdd sky130_fd_pr__pfet_01v8 L=0.15 W=0.55 nf=1 m=1
+XM2 Qb Q gnd gnd sky130_fd_pr__nfet_01v8 L=0.15 W=1.26 nf=1 m=1
+XM3 Q Qb vdd vdd sky130_fd_pr__pfet_01v8 L=0.15 W=0.55 nf=1 m=1
+XM4 Q Qb gnd gnd sky130_fd_pr__nfet_01v8 L=0.15 W=1.26 nf=1 m=1
+XM7 Q WL BL gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.42 nf=1 m=1
+XM8 Qb WL BLb gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.42 nf=1 m=1
+.ends
+
+.end

@@ -14,20 +14,7 @@
 // SPDX-License-Identifier: Apache-2.0
 
 `default_nettype none
-/*
- *-------------------------------------------------------------
- *
- * user_project_wrapper
- *
- * This wrapper enumerates all of the pins available to the
- * user for the user project.
- *
- * An example user project is provided in this wrapper.  The
- * example should be removed and replaced with the actual
- * user project.
- *
- *-------------------------------------------------------------
- */
+
 
 module user_project_wrapper #(
     parameter BITS = 32
@@ -59,65 +46,63 @@ module user_project_wrapper #(
     input  [127:0] la_data_in,
     output [127:0] la_data_out,
     input  [127:0] la_oenb,
-
-    // IOs
-    input  [`MPRJ_IO_PADS-1:0] io_in,
-    output [`MPRJ_IO_PADS-1:0] io_out,
-    output [`MPRJ_IO_PADS-1:0] io_oeb,
-
+    
     // Analog (direct connection to GPIO pad---use with caution)
     // Note that analog I/O is not available on the 7 lowest-numbered
     // GPIO pads, and so the analog_io indexing is offset from the
     // GPIO indexing by 7 (also upper 2 GPIOs do not have analog_io).
     inout [`MPRJ_IO_PADS-10:0] analog_io,
-
-    // Independent clock (on independent integer divider)
-    input   user_clock2,
-
+    
     // User maskable interrupt signals
-    output [2:0] user_irq
+    output [2:0] user_irq,
+    
+    input user_clock2,
+
+
+	input [`MPRJ_IO_PADS-1:0] io_in,
+	output [`MPRJ_IO_PADS-1:0] io_out,
+	output [`MPRJ_IO_PADS-1:0] io_oeb,
+
+
 );
 
 /*--------------------------------------*/
 /* User project is instantiated  here   */
 /*--------------------------------------*/
 
-user_proj_example mprj (
+
+user_proj_IMPACT_HEAD mprj (
 `ifdef USE_POWER_PINS
 	.vccd1(vccd1),	// User area 1 1.8V power
 	.vssd1(vssd1),	// User area 1 digital ground
+	.vccd2(vccd2),	// User area 2 1.8V supply
+    	.vssd2(vssd2),	// User area 2 digital ground
+    	.vdda1(vdda1),
+    	.vssa1(vssa1),
 `endif
 
-    .wb_clk_i(wb_clk_i),
-    .wb_rst_i(wb_rst_i),
-
-    // MGMT SoC Wishbone Slave
-
-    .wbs_cyc_i(wbs_cyc_i),
-    .wbs_stb_i(wbs_stb_i),
-    .wbs_we_i(wbs_we_i),
-    .wbs_sel_i(wbs_sel_i),
-    .wbs_adr_i(wbs_adr_i),
-    .wbs_dat_i(wbs_dat_i),
-    .wbs_ack_o(wbs_ack_o),
-    .wbs_dat_o(wbs_dat_o),
-
-    // Logic Analyzer
-
-    .la_data_in(la_data_in),
-    .la_data_out(la_data_out),
-    .la_oenb (la_oenb),
-
     // IO Pads
-
-    .io_in ({io_in[37:30],io_in[7:0]}),
-    .io_out({io_out[37:30],io_out[7:0]}),
-    .io_oeb({io_oeb[37:30],io_oeb[7:0]}),
-
-    // IRQ
-    .irq(user_irq)
+    .io_oeb(io_oeb[13:0]),
+    .io_out(io_out[5:0]),
+    .user_irq(user_irq), 
+    
+    .clk(io_in[37]),			//GPIO pin 37					
+    .rst(io_in[36]),			//GPIO pin 36
+    .Data_In(io_in[35:28]),		//GPIO pin 35-28		
+    .Byte_Select(io_in[27:26]), 	//GPIO pin 27-26			
+    .Proj_Select(io_in[25:24]),		//GPIO pin 25-24			
+    .Data_In_Enable(io_in[16]),		//GPIO pin 16
+    .WriteEnable(io_in[15]),		//GPIO pin 15			
+    .ReadEnable(io_in[14]),		//GPIO pin 14
+    .WL_enable(io_in[20]),		//GPIO pin 20			
+    .Byte_Mode_Enable(io_in[19]),	//GPIO pin 19
+    .Trunc_Enable(io_in[18]),		//GPIO pin 18
+    .PreCharge(io_in[17]),		//GPIO pin 17			
+    .Data_Out(io_out[13:6]),		//GPIO pin 13-6
+    .Reram_In_Enable(io_in[5]), 	//GPIO pin 5
+    .analog_io1(analog_io[14]), 	//GPIO pin 21
+    .analog_io2(analog_io[15]),		//GPIO pin 22
+    .analog_io3(analog_io[16])		//GPIO pin 23
 );
 
 endmodule	// user_project_wrapper
-
-`default_nettype wire

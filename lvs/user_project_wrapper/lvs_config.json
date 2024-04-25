@@ -1,8 +1,38 @@
 {
+	"STD_CELL_LIBRARY": "sky130_fd_sc_hd",
 	"TOP_SOURCE": "user_project_wrapper",
 	"TOP_LAYOUT": "$TOP_SOURCE",
 	"EXTRACT_FLATGLOB": [
-		""
+		"16x16_sram",
+                "1byteupdatedmanager",
+                "1bytewithand",
+                "2x2_sram",
+                "32x1024_truncation_memory_post",
+                "32x32_sram",
+                "4x4_sram",
+                "6tsram_base_final",
+                "8x8_sram",
+                "andopt",
+                "buffer",
+                "inverter_4t",
+                "myinverter",
+                "myinverter1",
+                "nand2_BA",
+                "opttruncation",
+                "oropt",
+                "precharge",
+                "read_write_circuit",
+                "ringsA",
+                "senseamp",
+                "sram_4t_layout",
+                "sram_6t",
+                "sram_6t_4t",
+                "updateddesign",
+                "updatedpowergate",
+                "write",
+                "muxopt",
+                "nand2_BA",
+                "write_read_bank"
 	],
 	"EXTRACT_ABSTRACT": [
 		"*__fill_*",
@@ -10,7 +40,7 @@
 		"*__tapvpwrvgnd_*"
 	],
 	"LVS_FLATTEN": [
-		""
+		"user_proj_IMPACT_HEAD"
 	],
 	"LVS_NOFLATTEN": [
 		""
@@ -20,10 +50,14 @@
 	],
 	"LVS_SPICE_FILES": [
 		"$PDK_ROOT/$PDK/libs.ref/sky130_fd_sc_hd/spice/sky130_ef_sc_hd__decap_12.spice",
-		"$PDK_ROOT/$PDK/libs.ref/sky130_fd_sc_hd/spice/sky130_fd_sc_hd.spice"
+		"$PDK_ROOT/$PDK/libs.ref/sky130_fd_sc_hd/spice/sky130_fd_sc_hd.spice",
+		"$UPRJ_ROOT/truncation_SRAM.spice",
+		"$UPRJ_ROOT/privacy_SRAM.spice",
+		"$UPRJ_ROOT/core_flat_v4.spice"
 	],
 	"LVS_VERILOG_FILES": [
-		"$UPRJ_ROOT/verilog/gl/user_proj_example.v",
+		"$UPRJ_ROOT/lvs/$TOP_SOURCE/defines.v",
+		"$UPRJ_ROOT/verilog/gl/user_proj_IMPACT_HEAD.v",
 		"$UPRJ_ROOT/verilog/gl/$TOP_SOURCE.v"
 	],
 	"LAYOUT_FILE": "$UPRJ_ROOT/gds/$TOP_LAYOUT.gds"

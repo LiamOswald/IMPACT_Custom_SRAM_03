@@ -1,0 +1,75 @@
+{
+    "DESIGN_NAME": "user_proj_IMPACT_HEAD",
+    "DESIGN_IS_CORE": 0,
+    "VERILOG_FILES": [
+        "dir::../../verilog/rtl/defines.v",
+        "dir::../../verilog/rtl/user_proj_IMPACT_HEAD.v",
+        "dir::../../verilog/rtl/BankWordDecoder.v",
+        "dir::../../verilog/rtl/OutBankMux.v",
+        "dir::../../verilog/rtl/Trunk_decoder.v",
+        "dir::../../verilog/rtl/Reram_mux.v",
+        "dir::../../verilog/rtl/data_in_reg.v"
+    ],
+    
+    "EXTRA_LEFS": "dir::macros/lef/*.lef",
+    "EXTRA_GDS_FILES": "dir::macros/gds/*.gds",
+    "MACRO_PLACEMENT_CFG": "dir::macro.cfg",
+    
+    "FP_PDN_VERTICAL_LAYER":"met4",
+    "FP_PDN_HORIZONTAL_LAYER":"met3",
+    
+    "ROUTING_CORES":12,
+      
+    "VERILOG_FILES_BLACKBOX": [
+        "dir::../../verilog/rtl/truncation_SRAM.v",
+        "dir::../../verilog/rtl/privacy_SRAM.v",
+        "dir::../../verilog/rtl/core_flat_v4.v"
+    ],
+    
+    "FP_PDN_MACRO_HOOKS": "bank01 vccd1 vssd1 vccd1 vssd1, bank02 vccd1 vssd1 vccd1 vssd1, bank02 vccd2 vssd2 vccd2 vssd2, core_flat_v4 vdda1 vssa1 vdda1 vssa1, core_flat_v4 vccd1 vssd1 vccd1 vssd1",
+    
+    "CLOCK_PORT": "clk",
+    
+    "FP_SIZING": "absolute",
+    "DIE_AREA": "0 0 2500 3000",
+    "FP_PIN_ORDER_CFG": "dir::pin_order.cfg",
+    "NO_SYNTH_CELL_LIST": "dir::no_synth.cells",
+    "DRC_EXCLUDE_CELL_LIST": "dir::drc_exclude.cells",
+    
+     "VDD_NETS": [
+        "vccd1", "vccd2", "vdda1"
+    ],
+    "GND_NETS": [
+        "vssd1", "vssd2", "vssa1"
+    ],    
+   
+    "FP_PDN_SKIPTRIM":true,	   
+    "RUN_IRDROP_REPORT":false,   
+    "SYNTH_USE_PG_PINS_DEFINES": "USE_POWER_PINS",
+    "LVS_CONNECT_BY_LABEL": true,
+    "RUN_KLAYOUT_XOR":true,
+    
+    "RSZ_DONT_TOUCH":["vdda1","vssa1","analog_io1","analog_io2","analog_io3"],
+    
+    "pdk::sky130*": {
+        "FP_CORE_UTIL": 45,
+        "RT_MAX_LAYER": "met4",
+        "PL_TARGET_DENSITY": 0.4,
+        "scl::sky130_fd_sc_hd": {
+            "CLOCK_PERIOD": 25
+        },
+        "scl::sky130_fd_sc_hdll": {
+            "CLOCK_PERIOD": 10
+        },
+        "scl::sky130_fd_sc_hs": {
+            "CLOCK_PERIOD": 8
+        },
+        "scl::sky130_fd_sc_ls": {
+            "CLOCK_PERIOD": 10,
+            "SYNTH_MAX_FANOUT": 5
+        },
+        "scl::sky130_fd_sc_ms": {
+            "CLOCK_PERIOD": 10
+        }
+    }
+}
